@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YFen_Browser_CSharp", "YFen_Browser_CSharp.csproj", "{D6E730E9-4FD2-4FA3-82B2-84BBD23B28FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6E730E9-4FD2-4FA3-82B2-84BBD23B28FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E730E9-4FD2-4FA3-82B2-84BBD23B28FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E730E9-4FD2-4FA3-82B2-84BBD23B28FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E730E9-4FD2-4FA3-82B2-84BBD23B28FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB85BCEC-3C1A-4A2E-A225-68F2059CD8D9}
+	EndGlobalSection
+EndGlobal

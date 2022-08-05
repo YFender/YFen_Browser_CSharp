@@ -5,8 +5,6 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YFen_Browser_CSharp", "YFen_Browser_CSharp.csproj", "{D6E730E9-4FD2-4FA3-82B2-84BBD23B28FC}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "..\Setup1\Setup1.vdproj", "{59E7AFAB-78A2-4C45-A2B0-CE291C8E0ABE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{D6E730E9-4FD2-4FA3-82B2-84BBD23B28FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6E730E9-4FD2-4FA3-82B2-84BBD23B28FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6E730E9-4FD2-4FA3-82B2-84BBD23B28FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{59E7AFAB-78A2-4C45-A2B0-CE291C8E0ABE}.Debug|Any CPU.ActiveCfg = Debug
-		{59E7AFAB-78A2-4C45-A2B0-CE291C8E0ABE}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

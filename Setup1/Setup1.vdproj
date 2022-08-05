@@ -606,7 +606,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:YFen Browser"
         "ProductCode" = "8:{33A9F50B-CD0E-4644-92E0-9B383E041569}"
-        "PackageCode" = "8:{74C68EC5-D009-4CF3-8681-DF85B01A45BD}"
+        "PackageCode" = "8:{8669897E-B2CD-43AF-B68E-93F21231A851}"
         "UpgradeCode" = "8:{EA02A24A-54FF-42F9-90DF-51AE4309A8D6}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"

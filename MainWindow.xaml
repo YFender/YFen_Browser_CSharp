@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:YFen_Browser_CSharp"
         xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         mc:Ignorable="d"
-        Title="YFen Browser" Height="450" Width="800" Icon="/a0xKDxrFMMO7Ip0Sp2QorAGSJ6BvhevuhY4Stxb_UTDK7S90cgpUiKwBoUAiTrV73c0EhSYteqaCErRquvt9aovq.ico">
+        Title="YFen Browser" Height="450" Width="800" Icon="/appicon.ico">
 
     <Window.Resources>
 

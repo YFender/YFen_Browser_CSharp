@@ -116,10 +116,7 @@
     <Resource Include="premium-icon-right-arrow-4941935.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="a0xKDxrFMMO7Ip0Sp2QorAGSJ6BvhevuhY4Stxb_UTDK7S90cgpUiKwBoUAiTrV73c0EhSYteqaCErRquvt9aovq.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="a0xKDxrFMMO7Ip0Sp2QorAGSJ6BvhevuhY4Stxb_UTDK7S90cgpUiKwBoUAiTrV73c0EhSYteqaCErRquvt9aovq.ico" />
+    <Resource Include="appicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Web.WebView2.1.0.1264.42\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.1264.42\build\Microsoft.Web.WebView2.targets')" />

@@ -605,15 +605,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:YFen Browser"
-        "ProductCode" = "8:{33A9F50B-CD0E-4644-92E0-9B383E041569}"
-        "PackageCode" = "8:{8669897E-B2CD-43AF-B68E-93F21231A851}"
+        "ProductCode" = "8:{F158AF43-4E9D-4B80-A26F-5C90274F0B3E}"
+        "PackageCode" = "8:{60CC3816-57B9-41BE-B447-7E8ED56AFF6E}"
         "UpgradeCode" = "8:{EA02A24A-54FF-42F9-90DF-51AE4309A8D6}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:YFen"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1169,7 +1169,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2AFED6D35CB24BF49B1DE80E277CC157"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\obj\\Debug\\YFen_Browser_CSharp.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_A4221E1B2B434E8895398C700DA127DE"

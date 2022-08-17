@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Newtonsoft.Json.Linq;
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Text.RegularExpressions;
 
 namespace YFen_Browser_CSharp
 {
@@ -24,8 +17,76 @@ namespace YFen_Browser_CSharp
         public MainWindow()
         {
             InitializeComponent();
+
+            Check_version();
+            
+            if (File.Exists("Setup.msi"))
+            {
+                File.Delete("Setup.msi");
+            }
         }
 
+
+
+        private async Task Check_version()
+        {
+            try
+            {
+                HttpClient httpClient = new HttpClient();
+                httpClient.DefaultRequestHeaders.Accept.Equals("application/vnd.github+json");
+                httpClient.DefaultRequestHeaders.Add("User-Agent", "Other");
+                string request = "https://api.github.com/repos/YFender/YFen_Browser_CSharp/releases/latest";
+                HttpResponseMessage response = (await httpClient.GetAsync(request));
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                JObject jObject = JObject.Parse(responseBody);
+                JToken list = jObject["name"];
+
+                if (list.ToString() != "v1.0.2")
+                {
+                    var update = MessageBox.Show("Обнаружена новая версия браузера.\nОбновить?", "Доступно обновление", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (update == MessageBoxResult.Yes)
+                    {
+                        try
+                        {
+                            webView.Visibility = Visibility.Collapsed;
+                            BackButton.Visibility = Visibility.Collapsed;
+                            SearchButton.Visibility = Visibility.Collapsed;
+                            SearchLine.Visibility = Visibility.Collapsed;
+                            HomeButton.Visibility = Visibility.Collapsed;
+
+                            DownloadProgressBar.Visibility = Visibility.Visible;
+
+                            string downloadFileUrl = jObject["assets"][0]["browser_download_url"].ToString();
+                            var destinationFilePath = System.IO.Path.GetFullPath("Setup.msi");
+                            using (var client = new HttpClientDownloadWithProgress(downloadFileUrl, destinationFilePath))
+                            {
+                                client.ProgressChanged += (totalFileSize, totalBytesDownloaded, progressPercentage) =>
+                                {
+                                    DownloadProgressBar.Value = (double)progressPercentage;
+                                };
+
+                                await client.StartDownload();
+                            }
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Ошибка загрузки");
+                            this.Close();
+                        }
+                        finally
+                        {
+                            Process.Start("Setup.msi");
+                            this.Close();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             webView.GoBack();

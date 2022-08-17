@@ -9,17 +9,17 @@ using System.Windows;
 
 namespace YFen_Browser_CSharp
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
 
+
             Check_version();
-            
+
+
             if (File.Exists("Setup.msi"))
             {
                 File.Delete("Setup.msi");
@@ -58,7 +58,8 @@ namespace YFen_Browser_CSharp
                             DownloadProgressBar.Visibility = Visibility.Visible;
 
                             string downloadFileUrl = jObject["assets"][0]["browser_download_url"].ToString();
-                            var destinationFilePath = System.IO.Path.GetFullPath("Setup.msi");
+                            var destinationFilePath = Path.GetFullPath("Setup.msi");
+
                             using (var client = new HttpClientDownloadWithProgress(downloadFileUrl, destinationFilePath))
                             {
                                 client.ProgressChanged += (totalFileSize, totalBytesDownloaded, progressPercentage) =>

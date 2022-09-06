@@ -46,7 +46,7 @@
             </ProgressBar.RenderTransform>
         </ProgressBar>
         <wv2:WebView2 x:Name="webView" Source="http://duckduckgo.com" Margin="0,43,0,0" Grid.ColumnSpan="3" NavigationCompleted="webView_NavigationCompleted"/>
-        <Button x:Name="BackButton" Style="{StaticResource ButtonStyle}" Margin="0,8,10,0" BorderBrush="#00707070" Cursor="Hand" Click="BackButton_Click" Height="30" VerticalAlignment="Top" Visibility="Visible" HorizontalAlignment="Right" Width="31">
+        <Button x:Name="BackButton" Style="{StaticResource ButtonStyle}" Margin="0,8,10,0" BorderBrush="#00707070" Cursor="Hand" Click="BackButton_Click" Height="30" VerticalAlignment="Top" Visibility="Collapsed" HorizontalAlignment="Right" Width="31">
             <Button.Background>
                 <ImageBrush ImageSource="/premium-icon-left-arrow-4941878.png" Stretch="Uniform"/>
             </Button.Background>

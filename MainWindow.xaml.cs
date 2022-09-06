@@ -42,7 +42,7 @@ namespace YFen_Browser_CSharp
                 JObject jObject = JObject.Parse(responseBody);
                 JToken list = jObject["name"];
 
-                if (list.ToString() != "v1.0.2")
+                if (list.ToString() != "v1.0.3")
                 {
                     var update = MessageBox.Show("Обнаружена новая версия браузера.\nОбновить?", "Доступно обновление", MessageBoxButton.YesNo, MessageBoxImage.Question);
                     if (update == MessageBoxResult.Yes)
@@ -132,6 +132,12 @@ namespace YFen_Browser_CSharp
             {
                 BackButton.Visibility = Visibility.Visible;
             }
+        }
+
+        private void VKButton_Click(object sender, RoutedEventArgs e)
+        {
+            SearchLine.Text = "https://vk.com/";
+            webView.Source = new Uri(SearchLine.Text);
         }
     }
 }

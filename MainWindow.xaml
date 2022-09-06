@@ -46,7 +46,7 @@
             </ProgressBar.RenderTransform>
         </ProgressBar>
         <wv2:WebView2 x:Name="webView" Source="http://duckduckgo.com" Margin="0,43,0,0" Grid.ColumnSpan="3" NavigationCompleted="webView_NavigationCompleted"/>
-        <Button x:Name="BackButton" Style="{StaticResource ButtonStyle}" Margin="0,8,10,0" BorderBrush="#00707070" Cursor="Hand" Click="BackButton_Click" Height="30" VerticalAlignment="Top" Visibility="Collapsed" HorizontalAlignment="Right" Width="31">
+        <Button x:Name="BackButton" Style="{StaticResource ButtonStyle}" Margin="0,8,10,0" BorderBrush="#00707070" Cursor="Hand" Click="BackButton_Click" Height="30" VerticalAlignment="Top" Visibility="Visible" HorizontalAlignment="Right" Width="31">
             <Button.Background>
                 <ImageBrush ImageSource="/premium-icon-left-arrow-4941878.png" Stretch="Uniform"/>
             </Button.Background>
@@ -60,6 +60,11 @@
         <Button x:Name="SearchButton" Style="{StaticResource ButtonStyle}" Margin="47,8,0,0" Height="30" VerticalAlignment="Top" Grid.Column="2" Click="SearchButton_Click" Cursor="Hand" HorizontalAlignment="Left" Width="30">
             <Button.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/premium-icon-right-arrow-4941935.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="VKButton" Style="{StaticResource ButtonStyle}" Margin="0,8,47,0" VerticalAlignment="Top" Height="30" HorizontalAlignment="Right" Width="36" Click="VKButton_Click" Cursor="Hand">
+            <Button.Background>
+                <ImageBrush ImageSource="/free-icon-vk-2504953.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
     </Grid>
